@@ -17,14 +17,19 @@ namespace TinyNvidiaUpdateChecker.Handlers
         }
 
         public static LibaryFile EvaluateLibary() {
-            var WinRAR = CheckWinRAR();
             var SevenZip = Check7Zip();
+            var WinRAR = CheckWinRAR();
 
-            if (WinRAR.IsInstalled()) {
-                return WinRAR;
-            } else if (SevenZip.IsInstalled()) {
+            if (SevenZip.IsInstalled())
+            {
                 return SevenZip;
-            } else {
+            }
+            else if (WinRAR.IsInstalled())
+            {
+                return WinRAR;
+            }
+            else
+            {
                 return null;
             }
         }
