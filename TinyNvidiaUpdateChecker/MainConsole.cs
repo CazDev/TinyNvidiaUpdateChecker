@@ -195,7 +195,7 @@ namespace TinyNvidiaUpdateChecker
             }
 
             Console.WriteLine();
-            Console.WriteLine("Job done! Press any key to exit.");
+            Console.WriteLine("Finished! Press any key to exit.");
             if (showUI) Console.ReadKey();
             LogManager.Log("BYE!", LogManager.Level.INFO);
             Environment.Exit(0);
